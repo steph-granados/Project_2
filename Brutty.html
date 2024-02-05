@@ -21,32 +21,32 @@
         top: 0;
         right: 0;
         width: 20%;
-        background-color: black; /* Match the page background */
+        background-color: black;
         padding: 10px;
-        text-align: right; /* Align text to the right */
+        text-align: right;
       }
 
       .header a {
         color: white;
-        text-decoration: underline; /* Remove underline */
-        margin-left: 10px; /* Space between links */
+        text-decoration: underline;
+        margin-left: 10px;
         font-size: 1em;
         font-weight: 700;
       }
 
       .header a:hover {
-        color: gray; /* Change color to gray on hover */
-        text-decoration: none; /* Ensure no underline on hover */
+        color: gray;
+        text-decoration: none;
       }
       .text-box {
         position: absolute;
         top: 0;
         left: 0;
-        width: 33.33%; /* 1/3 of the width */
+        width: 33.33%;
         padding: 20px;
         z-index: 2;
         box-sizing: border-box;
-        display: none; /* Initially hide the text boxes */
+        display: none;
       }
 
       .text-box h1,
@@ -67,17 +67,16 @@
       .spline-container2,
       .spline-container3,
       .spline-container4 {
-        /* Added spline-container4 */
         position: absolute;
-        right: 0; /* Align to the right */
-        width: 66.67%; /* 2/3 of the width */
+        right: 0;
+        width: 66.67%;
         height: 100%;
-        z-index: 1; /* Changed z-index to 1 */
-        opacity: 0; /* Set initial opacity to 0 */
-        transition: opacity 0.1s; /* Faster fade effect */
-        display: none; /* Start with containers hidden */
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Adjust vertical centering */
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.1s;
+        display: none;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
       .toggle-buttons {
@@ -298,15 +297,15 @@
           container.style.opacity = "0";
           setTimeout(function () {
             container.style.display = "none";
-          }, 100); // Match the fade out duration
+          }, 100);
         });
 
         setTimeout(function () {
           containerToShow.style.display = "block";
           setTimeout(function () {
             containerToShow.style.opacity = "1";
-          }, 10); // Small delay to ensure display is set before fading in
-        }, 100); // Match the fade out duration
+          }, 10);
+        }, 100);
       }
 
       function showContainer1() {
