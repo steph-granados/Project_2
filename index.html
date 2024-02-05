@@ -56,6 +56,7 @@
 
       .bottom-container {
         display: flex;
+        align-items: flex-end;
         height: 20%;
         z-index: 1;
         font-family: "cy", sans-serif;
@@ -108,11 +109,22 @@
 
       .spline-container {
         width: 100%;
-        height: calc(100% - 25%); /* Adjust height to not overlap with footer */
+        height: calc(100% - 20%); /* Adjust height to not overlap with footer */
         position: absolute;
         top: 0;
         left: 0;
         z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .spline-text {
+        font-size: 16px; /* Adjust the font size as needed */
+        color: white; /* Text color */
+        margin-top: 10px; /* Add some spacing between the viewer and text */
+        font-family: "cy", sans-serif;
       }
 
       spline-viewer {
@@ -163,11 +175,13 @@
     <div class="spline-container">
       <script
         type="module"
-        src="https://unpkg.com/@splinetool/viewer@1.0.47/build/spline-viewer.js"
+        src="https://unpkg.com/@splinetool/viewer@1.0.48/build/spline-viewer.js"
       ></script>
       <spline-viewer
-        url="https://prod.spline.design/Vb-KIGDz7Z9xftNP/scene.splinecode"
+        hint
+        url="https://prod.spline.design/ht7dcRSYamO4Qzca/scene.splinecode"
       ></spline-viewer>
+      <div class="spline-text">(ctrl + right click)</div>
     </div>
   </body>
 </html>
