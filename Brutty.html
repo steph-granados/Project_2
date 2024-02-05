@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/rsu5etz.css" />
+    <title>Brutty</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: black;
+        color: white;
+        font-family: "cy", sans-serif;
+        overflow: hidden;
+      }
+
+      .text-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 33.33%; /* 1/3 of the width */
+        padding: 20px;
+        z-index: 2;
+        box-sizing: border-box;
+        display: none; /* Initially hide the text boxes */
+      }
+
+      .text-box h1,
+      .text-box p {
+        color: white;
+      }
+
+      .text-box h1 {
+        font-size: 2em;
+      }
+
+      .text-box p {
+        font-size: 1.1em;
+        line-height: 1.5;
+      }
+
+      .spline-container,
+      .spline-container2,
+      .spline-container3,
+      .spline-container4 {
+        /* Added spline-container4 */
+        position: absolute;
+        right: 0; /* Align to the right */
+        width: 66.67%; /* 2/3 of the width */
+        height: 100%;
+        z-index: 1; /* Changed z-index to 1 */
+        opacity: 0; /* Set initial opacity to 0 */
+        transition: opacity 0.1s; /* Faster fade effect */
+        display: none; /* Start with containers hidden */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust vertical centering */
+      }
+
+      .toggle-buttons {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+      }
+
+      .toggle-button {
+        background-color: grey;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        margin: 5px;
+        cursor: pointer;
+        font-size: 1.1em;
+      }
+
+      .toggle-button:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.0.47/build/spline-viewer.js"
+    ></script>
+  </head>
+  <body>
+    <div class="text-box text-box-1">
+      <h1>Monumental</h1>
+      <p>
+        From the perspective of a designer or a passerby, Boston City Hall's
+        monumental appearance can be attributed to several key factors. For
+        designers, the building is a textbook example of Brutalist architecture,
+        showcasing the philosophy of form following function. The raw concrete
+        construction, an intentional choice in Brutalism, exudes strength and
+        permanence. The building's geometric design, with its sharp angles and
+        block-like structures, creates a visually striking and formidable
+        presence.
+      </p>
+
+      <p>
+        Designers might also appreciate the way it challenges conventional
+        aesthetics, representing a bold departure from traditional architecture.
+        This deliberate emphasis on raw, unadorned materials and the building's
+        stark form can be imposing, evoking a sense of awe or even discomfort,
+        which are hallmark reactions to monumental architecture.
+      </p>
+
+      <p>
+        For passersby, the experience of the building is more about its scale
+        and presence in the urban landscape. The sheer size of Boston City Hall,
+        with its towering height and expansive footprint, dominates the visual
+        field. This physical dominance, coupled with the building's strategic
+        placement in Government Center, makes it a focal point in downtown
+        Boston. The use of space around the building, including the plaza, also
+        contributes to its monumental feel, as it sets the building apart from
+        its surroundings, making it more prominent. Additionally, the building's
+        role as a center of civic activity imbues it with a sense of importance
+        and gravitas. For those walking by or interacting with it, Boston City
+        Hall is not just a building; it's a symbol of governance and public
+        life, making its monumental nature not just about its physical
+        attributes but also about its significance in the daily life of the
+        city.
+      </p>
+    </div>
+
+    <div class="text-box text-box-2" style="display: none">
+      <h1>Heroic</h1>
+      <p>
+        When viewed through the lens of being 'heroic', Boston City Hall's
+        architectural design and presence in the cityscape can evoke a different
+        set of interpretations, particularly from the perspectives of designers
+        and passersby. For designers, Boston City Hall as 'heroic' might be seen
+        in its architectural defiance and innovation. Brutalist architecture, of
+        which the City Hall is a prime example, was a radical departure from the
+        ornate and decorative styles that preceded it. This building, with its
+        raw concrete surfaces, bold, geometric forms, and fortress-like
+        appearance, embodies a certain architectural heroism - a brave foray
+        into uncharted design territory. This heroism is not in the traditional
+        sense of adornment and beauty, but in its stark functionality and
+        unapologetic departure from the norm.
+      </p>
+
+      <p>
+        Designers might view this as a heroic stand against conventional
+        architectural aesthetics, representing a bold and unyielding vision of
+        what a public building can be. From the perspective of a passerby, the
+        'heroic' aspect of Boston City Hall might be more related to its scale,
+        presence, and role in the city. The building's imposing size and
+        distinct shape can be seen as a physical manifestation of the strength
+        and resilience of the city's governance and public institutions.
+      </p>
+
+      <p>
+        Its prominence in the Government Center, a hub of civic activity, adds
+        to this narrative, portraying the building as a steadfast guardian of
+        the public interest. Furthermore, the way the building interacts with
+        its surroundings - set apart from other structures, dominating the plaza
+        - can give it a sense of being a sentinel or a protector, standing watch
+        over the city. This physical and symbolic prominence, coupled with the
+        building's role in the civic life of Boston, can contribute to a
+        perception of it as 'heroic', representing the ideals and endurance of
+        the city's public institutions.
+      </p>
+    </div>
+
+    <div class="text-box text-box-3" style="display: none">
+      <h1>Isolating</h1>
+      <p>
+        The perception of Boston City Hall's architecture as isolating can be
+        attributed to several design elements and its interaction with the urban
+        environment, as seen from both a designer's and a passerby's
+        perspective.
+      </p>
+      <p>
+        From a designer's viewpoint, the isolating aspect of Boston City Hall
+        often stems from its Brutalist architectural style. Brutalism, known for
+        its raw, unadorned use of concrete and large, imposing structures, can
+        create a sense of detachment or alienation. The building’s massive scale
+        and the use of heavy, stark concrete forms may appear uninviting and
+        fortress-like, distancing it from the human scale and the surrounding
+        urban fabric. Designers might also point out the lack of traditional
+        ornamentation or warm materials, which can contribute to a feeling of
+        coldness and isolation. Furthermore, the building’s elevated plaza
+        separates it physically from street level, creating a literal and
+        figurative barrier between the structure and the public.
+      </p>
+      <p>
+        For a passerby, the experience of Boston City Hall might also evoke
+        feelings of isolation. The building's sheer size and imposing presence
+        can be overwhelming, making individuals feel small in comparison. The
+        expansive, open plaza surrounding the building, often sparsely
+        populated, can enhance a sense of emptiness and detachment from the
+        bustling city life. The lack of inviting entrances or clear, welcoming
+        pathways to the building can make it seem inaccessible or disconnected
+        from the community. The starkness of the concrete and the geometric,
+        rigid form of the building contrast with the more traditional, warm, and
+        inviting architecture commonly found in public buildings, further
+        contributing to a sense of isolation. This disconnect between the
+        building and its urban context can make Boston City Hall appear as an
+        isolated entity, rather than an integrated part of the city's social and
+        civic fabric.
+      </p>
+    </div>
+
+    <div class="text-box text-box-4" style="display: none">
+      <h1>Scary</h1>
+      <p>
+        <!-- Placeholder text for the fourth box -->
+        Imagine a scene where Boston City Hall's Brutalist architecture evokes a
+        sense of fear or unease. From the perspective of a visitor or a
+        passerby, the building's immense scale and raw concrete structure cast
+        imposing shadows in the fading light of dusk. The sharp angles and
+        block-like forms of the building create an almost labyrinthine effect,
+        making the structure seem like a maze from which there is no easy
+        escape. The lack of ornamental features and the cold, unadorned surfaces
+        of the concrete contribute to a feeling of starkness and severity. The
+        building towers over the observer, its monumental size making one feel
+        small and vulnerable. This overwhelming presence, coupled with the eerie
+        quietness of the surrounding plaza at night, creates a sense of
+        foreboding and intimidation, making the building appear not just
+        monumental, but downright scary.
+      </p>
+    </div>
+
+    <div class="spline-container">
+      <spline-viewer
+        url="https://prod.spline.design/Vb-KIGDz7Z9xftNP/scene.splinecode"
+        transparent
+      ></spline-viewer>
+    </div>
+
+    <div class="spline-container2">
+      <spline-viewer
+        url="https://prod.spline.design/WJXC0Ed2lX2bpsLc/scene.splinecode"
+        transparent
+      ></spline-viewer>
+    </div>
+
+    <div class="spline-container3">
+      <spline-viewer
+        url="https://prod.spline.design/Un1RGvOYio-FuoPV/scene.splinecode"
+        transparent
+      ></spline-viewer>
+    </div>
+    <div class="spline-container4" style="display: none">
+      <spline-viewer
+        url="https://prod.spline.design/AMXUZElTjqeqQFz7/scene.splinecode"
+        transparent
+      ></spline-viewer>
+    </div>
+
+    <div class="toggle-buttons">
+      <button class="toggle-button" onclick="showContainer1()">
+        Monumental
+      </button>
+      <button class="toggle-button" onclick="showContainer2()">Heroic</button>
+      <button class="toggle-button" onclick="showContainer3()">
+        Isolating
+      </button>
+      <button class="toggle-button" onclick="showContainer4()">Scary</button>
+    </div>
+
+    <script>
+      function fadeContainer(containerToShow, containersToHide) {
+        containersToHide.forEach((container) => {
+          container.style.opacity = "0";
+          setTimeout(function () {
+            container.style.display = "none";
+          }, 100); // Match the fade out duration
+        });
+
+        setTimeout(function () {
+          containerToShow.style.display = "block";
+          setTimeout(function () {
+            containerToShow.style.opacity = "1";
+          }, 10); // Small delay to ensure display is set before fading in
+        }, 100); // Match the fade out duration
+      }
+
+      function showContainer1() {
+        fadeContainer(document.querySelector(".spline-container"), [
+          document.querySelector(".spline-container2"),
+          document.querySelector(".spline-container3"),
+          document.querySelector(".spline-container4"),
+        ]);
+        document.querySelector(".text-box-1").style.display = "block";
+        document.querySelector(".text-box-2").style.display = "none";
+        document.querySelector(".text-box-3").style.display = "none";
+        document.querySelector(".text-box-4").style.display = "none";
+      }
+
+      function showContainer2() {
+        fadeContainer(document.querySelector(".spline-container2"), [
+          document.querySelector(".spline-container"),
+          document.querySelector(".spline-container3"),
+          document.querySelector(".spline-container4"),
+        ]);
+        document.querySelector(".text-box-1").style.display = "none";
+        document.querySelector(".text-box-2").style.display = "block";
+        document.querySelector(".text-box-3").style.display = "none";
+        document.querySelector(".text-box-4").style.display = "none";
+      }
+
+      function showContainer3() {
+        fadeContainer(document.querySelector(".spline-container3"), [
+          document.querySelector(".spline-container"),
+          document.querySelector(".spline-container2"),
+          document.querySelector(".spline-container4"),
+        ]);
+        document.querySelector(".text-box-1").style.display = "none";
+        document.querySelector(".text-box-2").style.display = "none";
+        document.querySelector(".text-box-3").style.display = "block";
+        document.querySelector(".text-box-4").style.display = "none";
+      }
+
+      function showContainer4() {
+        fadeContainer(document.querySelector(".spline-container4"), [
+          document.querySelector(".spline-container"),
+          document.querySelector(".spline-container2"),
+          document.querySelector(".spline-container3"),
+        ]);
+        document.querySelector(".text-box-1").style.display = "none";
+        document.querySelector(".text-box-2").style.display = "none";
+        document.querySelector(".text-box-3").style.display = "none";
+        document.querySelector(".text-box-4").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
