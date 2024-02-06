@@ -6,6 +6,26 @@
     <link rel="stylesheet" href="https://use.typekit.net/rsu5etz.css" />
     <title>Vantage</title>
     <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px; /* Width of vertical scrollbar */
+        height: 10px; /* Height of horizontal scrollbar */
+      }
+
+      /* Track of the scrollbar */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Color of the track */
+      }
+
+      /* Handle of the scrollbar */
+      ::-webkit-scrollbar-thumb {
+        background: #888; /* Color of the scrollbar thumb */
+      }
+
+      /* Handle of the scrollbar on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Color of the scrollbar thumb on hover */
+      }
       body,
       html {
         margin: 0;
@@ -24,6 +44,7 @@
         background-color: black;
         padding: 10px;
         text-align: right;
+        z-index: 5;
       }
 
       .header a {
@@ -47,6 +68,8 @@
         z-index: 2;
         box-sizing: border-box;
         display: none;
+        overflow-y: auto; /* Enables vertical scrolling */
+        max-height: 100%;
       }
 
       .text-box h1,
@@ -83,7 +106,13 @@
       .spline-container,
       .spline-container2,
       .spline-container3,
-      .spline-container4 {
+      .spline-container4,
+      .spline-container5,
+      .spline-container6,
+      .spline-container7,
+      .spline-container8,
+      .spline-container9,
+      .spline-container10 {
         position: absolute;
         right: 0;
         width: 100%;
@@ -99,14 +128,17 @@
       .toggle-buttons {
         position: absolute;
         bottom: 0;
-        align-self: center; /* Center horizontally within spline-column */
-        margin-bottom: 20px; /* Space from the bottom */
+        right: 0;
+        margin-bottom: 20px;
         z-index: 3;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start; /* Align items to the start for better control */
+        width: 66.67%;
+        overflow-x: auto; /* Enables horizontal scrolling if content overflows */
       }
 
       .toggle-button {
+        flex: 0 0 auto; /* This ensures that the buttons don't shrink */
         background-color: grey;
         color: white;
         border: none;
@@ -283,122 +315,343 @@
             downright scary.
           </p>
         </div>
+
+        <div class="text-box text-box-5" style="display: none">
+          <h1>Scary</h1>
+          <p>
+            <!-- Placeholder text for the fourth box -->
+            Imagine a scene where Boston City Hall's Brutalist architecture
+            evokes a sense of fear or unease. From the perspective of a visitor
+            or a passerby, the building's immense scale and raw concrete
+            structure cast imposing shadows in the fading light of dusk. The
+            sharp angles and block-like forms of the building create an almost
+            labyrinthine effect, making the structure seem like a maze from
+            which there is no easy escape. The lack of ornamental features and
+            the cold, unadorned surfaces of the concrete contribute to a feeling
+            of starkness and severity. The building towers over the observer,
+            its monumental size making one feel small and vulnerable. This
+            overwhelming presence, coupled with the eerie quietness of the
+            surrounding plaza at night, creates a sense of foreboding and
+            intimidation, making the building appear not just monumental, but
+            downright scary.
+          </p>
+        </div>
+
+        <div class="text-box text-box-6" style="display: none">
+          <h1>Scary</h1>
+          <p>
+            <!-- Placeholder text for the fourth box -->
+            Imagine a scene where Boston City Hall's Brutalist architecture
+            evokes a sense of fear or unease. From the perspective of a visitor
+            or a passerby, the building's immense scale and raw concrete
+            structure cast imposing shadows in the fading light of dusk. The
+            sharp angles and block-like forms of the building create an almost
+            labyrinthine effect, making the structure seem like a maze from
+            which there is no easy escape. The lack of ornamental features and
+            the cold, unadorned surfaces of the concrete contribute to a feeling
+            of starkness and severity. The building towers over the observer,
+            its monumental size making one feel small and vulnerable. This
+            overwhelming presence, coupled with the eerie quietness of the
+            surrounding plaza at night, creates a sense of foreboding and
+            intimidation, making the building appear not just monumental, but
+            downright scary.
+          </p>
+        </div>
+
+        <div class="text-box text-box-7" style="display: none">
+          <h1>Scary</h1>
+          <p>
+            <!-- Placeholder text for the fourth box -->
+            Imagine a scene where Boston City Hall's Brutalist architecture
+            evokes a sense of fear or unease. From the perspective of a visitor
+            or a passerby, the building's immense scale and raw concrete
+            structure cast imposing shadows in the fading light of dusk. The
+            sharp angles and block-like forms of the building create an almost
+            labyrinthine effect, making the structure seem like a maze from
+            which there is no easy escape. The lack of ornamental features and
+            the cold, unadorned surfaces of the concrete contribute to a feeling
+            of starkness and severity. The building towers over the observer,
+            its monumental size making one feel small and vulnerable. This
+            overwhelming presence, coupled with the eerie quietness of the
+            surrounding plaza at night, creates a sense of foreboding and
+            intimidation, making the building appear not just monumental, but
+            downright scary.
+          </p>
+        </div>
+
+        <div class="text-box text-box-8" style="display: none">
+          <h1>Scary</h1>
+          <p>
+            <!-- Placeholder text for the fourth box -->
+            Imagine a scene where Boston City Hall's Brutalist architecture
+            evokes a sense of fear or unease. From the perspective of a visitor
+            or a passerby, the building's immense scale and raw concrete
+            structure cast imposing shadows in the fading light of dusk. The
+            sharp angles and block-like forms of the building create an almost
+            labyrinthine effect, making the structure seem like a maze from
+            which there is no easy escape. The lack of ornamental features and
+            the cold, unadorned surfaces of the concrete contribute to a feeling
+            of starkness and severity. The building towers over the observer,
+            its monumental size making one feel small and vulnerable. This
+            overwhelming presence, coupled with the eerie quietness of the
+            surrounding plaza at night, creates a sense of foreboding and
+            intimidation, making the building appear not just monumental, but
+            downright scary.
+          </p>
+        </div>
+
+        <div class="text-box text-box-9" style="display: none">
+          <h1>Scary</h1>
+          <p>
+            <!-- Placeholder text for the fourth box -->
+            Imagine a scene where Boston City Hall's Brutalist architecture
+            evokes a sense of fear or unease. From the perspective of a visitor
+            or a passerby, the building's immense scale and raw concrete
+            structure cast imposing shadows in the fading light of dusk. The
+            sharp angles and block-like forms of the building create an almost
+            labyrinthine effect, making the structure seem like a maze from
+            which there is no easy escape. The lack of ornamental features and
+            the cold, unadorned surfaces of the concrete contribute to a feeling
+            of starkness and severity. The building towers over the observer,
+            its monumental size making one feel small and vulnerable. This
+            overwhelming presence, coupled with the eerie quietness of the
+            surrounding plaza at night, creates a sense of foreboding and
+            intimidation, making the building appear not just monumental, but
+            downright scary.
+          </p>
+        </div>
+
+        <div class="text-box text-box-10" style="display: none">
+          <h1>Scary</h1>
+          <p>
+            <!-- Placeholder text for the fourth box -->
+            Imagine a scene where Boston City Hall's Brutalist architecture
+            evokes a sense of fear or unease. From the perspective of a visitor
+            or a passerby, the building's immense scale and raw concrete
+            structure cast imposing shadows in the fading light of dusk. The
+            sharp angles and block-like forms of the building create an almost
+            labyrinthine effect, making the structure seem like a maze from
+            which there is no easy escape. The lack of ornamental features and
+            the cold, unadorned surfaces of the concrete contribute to a feeling
+            of starkness and severity. The building towers over the observer,
+            its monumental size making one feel small and vulnerable. This
+            overwhelming presence, coupled with the eerie quietness of the
+            surrounding plaza at night, creates a sense of foreboding and
+            intimidation, making the building appear not just monumental, but
+            downright scary.
+          </p>
+        </div>
       </div>
 
       <div class="spline-column">
         <div class="spline-container">
-            <spline-viewer
-                url="https://prod.spline.design/Vb-KIGDz7Z9xftNP/scene.splinecode"
-                transparent
-            ></spline-viewer>
+          <spline-viewer
+            url="https://prod.spline.design/Vb-KIGDz7Z9xftNP/scene.splinecode"
+            transparent
+          ></spline-viewer>
         </div>
         <div class="spline-container2" style="display: none">
-            <spline-viewer
-                url="https://prod.spline.design/WJXC0Ed2lX2bpsLc/scene.splinecode"
-                transparent
-            ></spline-viewer>
+          <spline-viewer
+            url="https://prod.spline.design/WJXC0Ed2lX2bpsLc/scene.splinecode"
+            transparent
+          ></spline-viewer>
         </div>
         <div class="spline-container3" style="display: none">
-            <spline-viewer
-                url="https://prod.spline.design/Un1RGvOYio-FuoPV/scene.splinecode"
-                transparent
-            ></spline-viewer>
+          <spline-viewer
+            url="https://prod.spline.design/Un1RGvOYio-FuoPV/scene.splinecode"
+            transparent
+          ></spline-viewer>
         </div>
         <div class="spline-container4" style="display: none">
-            <spline-viewer
-                url="https://prod.spline.design/AMXUZElTjqeqQFz7/scene.splinecode"
-                transparent
-            ></spline-viewer>
+          <spline-viewer
+            url="https://prod.spline.design/AMXUZElTjqeqQFz7/scene.splinecode"
+            transparent
+          ></spline-viewer>
         </div>
+        <div class="spline-container5" style="display: none">
+          <spline-viewer
+            url="https://prod.spline.design/AMXUZElTjqeqQFz7/scene.splinecode"
+            transparent
+          ></spline-viewer>
+        </div>
+        <div class="spline-container6" style="display: none">
+          <spline-viewer
+            url="https://prod.spline.design/AMXUZElTjqeqQFz7/scene.splinecode"
+            transparent
+          ></spline-viewer>
+        </div>
+        <div class="spline-container7" style="display: none">
+          <spline-viewer
+            url="https://prod.spline.design/AMXUZElTjqeqQFz7/scene.splinecode"
+            transparent
+          ></spline-viewer>
+        </div>
+        <div class="spline-container8" style="display: none">
+          <spline-viewer
+            url="https://prod.spline.design/AMXUZElTjqeqQFz7/scene.splinecode"
+            transparent
+          ></spline-viewer>
+        </div>
+        <div class="spline-container9" style="display: none">
+          <spline-viewer
+            url="https://prod.spline.design/AMXUZElTjqeqQFz7/scene.splinecode"
+            transparent
+          ></spline-viewer>
+        </div>
+        <div class="spline-container10" style="display: none">
+          <spline-viewer
+            url="https://prod.spline.design/AMXUZElTjqeqQFz7/scene.splinecode"
+            transparent
+          ></spline-viewer>
+        </div>
+      </div>
 
-        <div class="toggle-buttons">
-            <button class="toggle-button" onclick="showContainer1()">
-                Monumental
-            </button>
-            <button class="toggle-button" onclick="showContainer2()">
-                Heroic
-            </button>
-            <button class="toggle-button" onclick="showContainer3()">
-                Isolating
-            </button>
-            <button class="toggle-button" onclick="showContainer4()">
-                Scary
-            </button>
-        </div>
+      <div class="toggle-buttons">
+        <button class="toggle-button" onclick="showContainer1()">
+          Monumental
+        </button>
+        <button class="toggle-button" onclick="showContainer2()">Heroic</button>
+        <button class="toggle-button" onclick="showContainer3()">
+          Isolating
+        </button>
+        <button class="toggle-button" onclick="showContainer4()">Scary1</button>
+        <button class="toggle-button" onclick="showContainer5()">Scary2</button>
+        <button class="toggle-button" onclick="showContainer6()">Scary3</button>
+        <button class="toggle-button" onclick="showContainer7()">Scary4</button>
+        <button class="toggle-button" onclick="showContainer8()">Scary5</button>
+        <button class="toggle-button" onclick="showContainer9()">Scary6</button>
+        <button class="toggle-button" onclick="showContainer10()">
+          Scary7
+        </button>
+      </div>
     </div>
 
     <script>
-      function fadeContainer(containerToShow, containerToHide, textBoxToShow, textBoxToHide) {
-          containerToHide.forEach((container) => {
-              container.style.opacity = "0";
-              setTimeout(function () {
-                  container.style.display = "none";
-              }, 100);
-          });
-  
-          textBoxToHide.forEach((textBox) => {
-              textBox.style.display = "none";
-          });
-  
+      window.onload = function () {
+        showContainer1(); // Automatically click the "Monumental" button when the page loads
+      };
+
+      function fadeContainer(containerToShow, textBoxToShow) {
+        const allContainers = document.querySelectorAll(
+          ".spline-container, .spline-container2, .spline-container3, .spline-container4, .spline-container5, .spline-container6, .spline-container7, .spline-container8, .spline-container9, .spline-container10"
+        );
+        const allTextBoxes = document.querySelectorAll(
+          ".text-box, .text-box-2, .text-box-3, .text-box-4, .text-box-5, .text-box-6, .text-box-7, .text-box-8, .text-box-9, .text-box-10"
+        );
+
+        allContainers.forEach((container) => {
+          if (container !== containerToShow) {
+            container.style.opacity = "0";
+            setTimeout(function () {
+              container.style.display = "none";
+            }, 100);
+          }
+        });
+
+        allTextBoxes.forEach((textBox) => {
+          if (textBox !== textBoxToShow) {
+            textBox.style.display = "none";
+          }
+        });
+
+        setTimeout(function () {
+          containerToShow.style.display = "block";
+          textBoxToShow.style.display = "block";
           setTimeout(function () {
-              containerToShow.style.display = "block";
-              textBoxToShow.style.display = "block";
-              setTimeout(function () {
-                  containerToShow.style.opacity = "1";
-              }, 10);
-          }, 100);
+            containerToShow.style.opacity = "1";
+          }, 10);
+        }, 100);
       }
-  
+
       function showContainer1() {
-          fadeContainer(
-              document.querySelector(".spline-container"), 
-              [document.querySelector(".spline-container2"), document.querySelector(".spline-container3"), document.querySelector(".spline-container4")],
-              document.querySelector(".text-box-1"),
-              [document.querySelector(".text-box-2"), document.querySelector(".text-box-3"), document.querySelector(".text-box-4")]
-          );
-          makeActive(0);
+        fadeContainer(
+          document.querySelector(".spline-container"),
+          document.querySelector(".text-box-1")
+        );
+        makeActive(0);
       }
-  
       function showContainer2() {
-          fadeContainer(
-              document.querySelector(".spline-container2"), 
-              [document.querySelector(".spline-container"), document.querySelector(".spline-container3"), document.querySelector(".spline-container4")],
-              document.querySelector(".text-box-2"),
-              [document.querySelector(".text-box-1"), document.querySelector(".text-box-3"), document.querySelector(".text-box-4")]
-          );
-          makeActive(1);
+        fadeContainer(
+          document.querySelector(".spline-container2"),
+          document.querySelector(".text-box-2")
+        );
+        makeActive(1);
       }
-  
+
       function showContainer3() {
-          fadeContainer(
-              document.querySelector(".spline-container3"), 
-              [document.querySelector(".spline-container"), document.querySelector(".spline-container2"), document.querySelector(".spline-container4")],
-              document.querySelector(".text-box-3"),
-              [document.querySelector(".text-box-1"), document.querySelector(".text-box-2"), document.querySelector(".text-box-4")]
-          );
-          makeActive(2);
+        fadeContainer(
+          document.querySelector(".spline-container3"),
+          document.querySelector(".text-box-3")
+        );
+        makeActive(2);
       }
-  
+
       function showContainer4() {
-          fadeContainer(
-              document.querySelector(".spline-container4"), 
-              [document.querySelector(".spline-container"), document.querySelector(".spline-container2"), document.querySelector(".spline-container3")],
-              document.querySelector(".text-box-4"),
-              [document.querySelector(".text-box-1"), document.querySelector(".text-box-2"), document.querySelector(".text-box-3")]
-          );
-          makeActive(3);
+        fadeContainer(
+          document.querySelector(".spline-container4"),
+          document.querySelector(".text-box-4")
+        );
+        makeActive(3);
       }
-  
+
+      function showContainer5() {
+        fadeContainer(
+          document.querySelector(".spline-container5"),
+          document.querySelector(".text-box-5")
+        );
+        makeActive(4);
+      }
+
+      function showContainer6() {
+        fadeContainer(
+          document.querySelector(".spline-container6"),
+          document.querySelector(".text-box-6")
+        );
+        makeActive(5);
+      }
+
+      function showContainer7() {
+        fadeContainer(
+          document.querySelector(".spline-container7"),
+          document.querySelector(".text-box-7")
+        );
+        makeActive(6);
+      }
+
+      function showContainer8() {
+        fadeContainer(
+          document.querySelector(".spline-container8"),
+          document.querySelector(".text-box-8")
+        );
+        makeActive(7);
+      }
+
+      function showContainer9() {
+        fadeContainer(
+          document.querySelector(".spline-container9"),
+          document.querySelector(".text-box-9")
+        );
+        makeActive(8);
+      }
+
+      function showContainer10() {
+        fadeContainer(
+          document.querySelector(".spline-container10"),
+          document.querySelector(".text-box-10")
+        );
+        makeActive(9);
+      }
+
       function makeActive(btnIndex) {
-          var buttons = document.querySelectorAll('.toggle-button');
-          buttons.forEach((button, index) => {
-              if (index === btnIndex) {
-                  button.classList.add('active');
-              } else {
-                  button.classList.remove('active');
-              }
-          });
+        var buttons = document.querySelectorAll(".toggle-button");
+        buttons.forEach((button, index) => {
+          if (index === btnIndex) {
+            button.classList.add("active");
+          } else {
+            button.classList.remove("active");
+          }
+        });
       }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
