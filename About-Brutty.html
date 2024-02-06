@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://use.typekit.net/rsu5etz.css" />
-    <title>About </title>
-  </head>
-  <style>
-    html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: black;
-      color: white;
-      font-family: "cy", sans-serif;
-      overflow: hidden;
-    }
-    .header {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 20%;
-      background-color: black; 
-      padding: 10px;
-      text-align: right; 
-      overflow: hidden;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.typekit.net/rsu5etz.css" />
+  <title>About </title>
+</head>
+<style>
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-family: "cy", sans-serif;
+    overflow: hidden;
+  }
+  .header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    background-color: black;
+    padding: 10px;
+    text-align: right;
+    overflow: hidden;
+  }
 
-    .header a {
-      color: white;
-      text-decoration: underline; 
-      margin-left: 10px; 
-      font-size: 1em;
-      font-weight: 700;
-    }
+  .header a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 10px;
+    font-size: 1em;
+    font-weight: 700;
+  }
 
-    .header a:hover {
-      color: gray; 
-      text-decoration: none; 
-    }
+  .header a:hover {
+    color: gray;
+    text-decoration: none;
+  }
 
-    .about-text {
+  .about-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,37 +50,41 @@
     margin-left: 10%;
     margin-right: 10%;
     font-size: 24px;
-}
+  }
 
-.about-title {
+  .about-title {
     text-align: left;
-    width: 100%; /* Ensure it spans the full width of the container */
+    width: 100%;
     font-weight: bold;
-    /* Any other styling specific to the title */
-}
+  }
 
-  </style>
-  <body>
-    <div class="header">
-      <a href="index.html">Main</a>
-      <a href="Brutty.html">The Vantage Points</a>
-    </div>
-    <div class="about-text">
-        <div class="about-title">About</div>
-        <p> Experience Boston City Hall from the unique viewpoints of both architects and the general public. 
-            This website aims to understand the controversy surrounding this iconic structure – 
-            celebrated as monumental by architects and designers while simultaneously labeled as an eyesore by the public. 
-            Rather than seeking to merge these differing opinions,
-            we provide a platform to showcase both perspectives with the hope that one can understand the other, as neither one holds the absolute truth.
-            <p>Architects worldwide have long revered Boston City Hall as an important masterpiece. 
-            Going so far as calling it "architectural treasure", "heroic" and "democratic". Meanwhile, for many in the general public, Boston City Hall has been a source of controversy, calling the building "indecipherable", "abomination", and of course "ugly".</p>
-            This website aims to explore, view and re-view, what the other sees 
-             by studying the building's perceived starkness and its unconventional looks from all angles possible.
-            The intention is not to reconcile these contrasting viewpoints but to present the richness of the discourse surrounding Boston City Hall. 
-            The Brutalist building transcends being just a structure; 
-            it embodies the beauty of differing opinions and the power of architecture to inspire thought-provoking discussions while also simply being that brute entity that people simply find out of place. 
-            </p>
+  .text-container {
+    overflow: auto;
+    max-height: 70vh;
+  }
+</style>
+<body>
+<div class="header">
+  <a href="index.html">Main</a>
+  <a href="Brutty.html">The Vantage Points</a>
+</div>
+<div class="about-text">
+  <div class="about-title">About</div>
+  <div class="text-container">
+    <p> Experience Boston City Hall from the unique viewpoints of both architects and the general public.
+      This website aims to understand the controversy surrounding this iconic structure –
+      celebrated as monumental by architects and designers while simultaneously labeled as an eyesore by the public.
+      Rather than seeking to merge these differing opinions,
+      we provide a platform to showcase both perspectives with the hope that one can understand the other, but neither hold the absolute truth.
+      <p>Architects worldwide have long held Boston City Hall in high esteem, lauding it as an architectural treasure, a heroic creation, and a symbol of democracy.
+        In contrast, the general public has often criticized the building as indecipherable, an abomination, and, plainly, ugly.</p>
+      This website aims to explore, view and re-view, what the other sees
+       by studying the building's perceived starkness and its unconventional looks from all angles possible.
+      The intention is not to reconcile these contrasting viewpoints but to present the richness of the discourse surrounding Boston City Hall.
+      The Brutalist building transcends being just a structure;
+      it embodies the beauty of differing opinions and the power of architecture to inspire thought-provoking discussions while also simply being that brute entity that people simply find out of place.
       </p>
-    </div>
-  </body>
+  </div>
+</div>
+</body>
 </html>
