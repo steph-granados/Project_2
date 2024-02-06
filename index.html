@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/rsu5etz.css" />
     <title>Brutty</title>
     <style>
+       @media (min-width: 500px) {
       body,
       html {
         margin: 0;
@@ -76,8 +77,8 @@
 
 
       .single-line-container a {
-      margin: 0 20px; /* Adjust spacing as needed */
-      font-size: 2em; /* Adjust font size as needed */
+      margin: 0 20px; 
+      font-size: 2em; 
       color: white;
       text-decoration: underline;
     }
@@ -88,9 +89,9 @@
     }
 
     .beauty-text {
-      font-size: 2em; /* Smaller text */
-      font-style: italic; /* Italicized text */
-      margin-bottom: 20px; /* Space above the links */
+      font-size: 1.75em; 
+      font-style: italic; 
+      margin-bottom: 20px; 
       justify-content: center;
       display: flex;
       align-items: flex-start;
@@ -134,9 +135,111 @@
         width: 100%;
         left: 0;
         bottom: 0;
+      } 
+      .mobile-message {
+    display: none; /* Hide on larger screens */
+  }
+}
+  
+    @media (min-width: 500px) {
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: black;
+        color: white;
+        font-style: normal;
+        position: relative;
+        overflow: hidden;
       }
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        z-index: 1;
+        font-family: "alfarn-2", sans-serif;
+        font-weight: 700;
+    }
+
+    .text {
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .text1 { font-size: 12em; }
+    .text2 { font-size: 10em; }
+    .text3 { font-size: 8em; }
+    .text4 { font-size: 6em; }
+
+    .bottom-container {
+        display: flex;
+        align-items: flex-start;
+        height: 15%;
+        z-index: 1;
+        font-family: "cy", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        justify-content: center;
+    }
+
+    .grid-container {
+        width: 66.67%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+   
+    .single-line-container a[href='Brutty.html'], 
+    .single-line-container a[href='About-Brutty.html'] {
+        display: none;
+        color: black;
+    }
+    
+    .single-line-container a:hover {
+        color: grey;
+        text-decoration: underline; 
+    }
+    .mobile-message {
+    display: block; /* Show on smaller screens */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* Ensure it's on top */
+    font-family: "cy", sans-serif;
+    font-size: 1em;}
+  }
+
+
+    
     </style>
   </head>
+  <div class="mobile-message">
+    Albeit the website is about vantage points, unfortunately this smaller window is not one. Please view in computer browser.
+  </div>
   <body>
     <div class="text-container">
       <div class="text text1">B R U T A L I S T</div>
@@ -147,7 +250,7 @@
 
     <footer class="bottom-container">
        <div class="single-line-container">
-    <div class="beauty-text">Beauty is in the eye of the beholder</div>
+    <div class="beauty-text">"Beauty is in the eye of the beholder"</div>
     <a href="Brutty.html">The Vantage Points </a>
     <a href="About-Brutty.html">About</a>
   </div>
