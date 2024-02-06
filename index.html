@@ -56,21 +56,12 @@
 
       .bottom-container {
         display: flex;
-        align-items: flex-end;
-        height: 20%;
+        align-items: flex-start;
+        height: 15%;
         z-index: 1;
         font-family: "cy", sans-serif;
         font-weight: 700;
-      }
-
-      .flexbox-left {
-        width: 33.33%;
-        height: 100%;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
+        justify-content: center;
       }
 
       .grid-container {
@@ -82,34 +73,32 @@
         padding: 10px;
       }
 
-      .grid-item-right {
-        display: flex;
-        justify-content: flex-end;
-        align-items: end;
-        font-size: 1em;
-        cursor: pointer;
-      }
 
-      .grid-item-right,
-      .grid-item-right a {
-        display: flex;
-        justify-content: flex-end;
-        align-items: end;
-        font-size: 1em;
-        cursor: pointer;
-        color: white;
-        text-decoration: underline;
-      }
+      .single-line-container a {
+      margin: 0 20px; /* Adjust spacing as needed */
+      font-size: 1.8em; /* Adjust font size as needed */
+      color: white;
+      text-decoration: underline;
+    }
 
-      .grid-item-right:hover,
-      .grid-item-right a:hover {
-        color: grey;
-        text-decoration: none;
-      }
+    .single-line-container a:hover {
+      color: grey;
+      text-decoration: underline;
+    }
+
+    .beauty-text {
+      font-size: 1em; /* Smaller text */
+      font-style: italic; /* Italicized text */
+      margin-bottom: 20px; /* Space above the links */
+      justify-content: center;
+      display: flex;
+      align-items: flex-start;
+      font-weight: 100;
+    }
 
       .spline-container {
         width: 100%;
-        height: calc(100% - 20%);
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -118,13 +107,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      }
-
-      .spline-text {
-        font-size: 16px;
-        color: rgb(170, 170, 170);
-        margin-top: 10px;
-        font-family: "cy", sans-serif;
       }
 
       spline-viewer {
@@ -161,12 +143,13 @@
       <div class="text text4">B R U T A L I S T</div>
     </div>
     <footer class="bottom-container">
-      <div class="flexbox-left">
-        <div>Beauty</div>
-        <div>is in the</div>
-        <div>eye of the beholder</div>
-      </div>
-      <div class="grid-container">
+      
+       <div class="single-line-container">
+    <div class="beauty-text">Beauty is in the eye of the beholder</div>
+    <a href="Brutty.html">The Vantage Points </a>
+    <a href="About-Brutty.html">About</a>
+  </div>
+      <!-- <div class="grid-container">
         <div class="grid-item-right" style="grid-row: 1">
           <a href="Brutty.html" id="menu-1">Brutty</a>
         </div>
@@ -175,7 +158,7 @@
         </div>
         <div class="grid-item-right" style="grid-row: 3">
           <a href="About-Brutty.html" id="menu-3">About</a>
-        </div>
+        </div> -->
       </div>
     </footer>
     <div class="spline-container">
@@ -187,7 +170,6 @@
         hint
         url="https://prod.spline.design/qVxeglLs5GG6Qt-W/scene.splinecode"
       ></spline-viewer>
-      <div class="spline-text">(right click to pan)</div>
     </div>
   </body>
 </html>
