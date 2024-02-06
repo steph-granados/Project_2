@@ -1,11 +1,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/rsu5etz.css" />
     <title>Brutty</title>
     <style>
-      @media (min-width: 500px) {
         body, html {
     margin: 0;
     padding: 0;
@@ -17,11 +16,28 @@
     overflow: hidden;
 }
 
+.mobile-message{
+position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                padding: 20px;
+                background-color: white;
+                color: rgb(44, 44, 44);
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                z-index: 100;
+                font-family: "cy", sans-serif;
+                font-size: 1em;
+                font-weight: 600;
+                line-height: 1em;
+}
 /* Styles for screen width larger than or equal to 500px */
-@media (min-width: 500px) {
+@media (min-width: 502px) {
     .mobile-message {
-        display: none;
-    }
+        display: none;}
 
     /* Your existing styles for larger screens */
     .text-container {
@@ -126,36 +142,29 @@
     }
 }
 
-/* Styles for screen width smaller than 500px */
-@media (max-width: 499px) {
-    .mobile-message {
-        display: block; /* Show mobile message */
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        padding: 20px;
-        background-color: white;
-        color: black;
-        text-align: center;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 100;
-        font-family: "cy", sans-serif;
-        font-size: 1em;
-    }
-
-    /* Hide content on smaller screens */
-    .text-container, .bottom-container, .grid-container, .spline-container {
-        display: none;
-    }
-}}
+@media (max-width: 501px) {
+            .mobile-message {
+                display: block; /* Show mobile message */
+            }
+            .spline-container {
+                display: block;
+            }
+            .text-container{
+              display:none;
+            }
+            .bottom-container .single-line-container a[href='Brutty.html'],
+            .bottom-container .single-line-container a[href='About-Brutty.html'],
+            .bottom-container .beauty-text {
+                display: none;
+                z-index: index 0;
+            }
+        }
     </style>
-  </head>
-  <div class="mobile-message">
-    Albeit the website is about vantage points, unfortunately this smaller window is not one. Please view in computer browser.
-  </div>
+</head>
+<body>
+    <div class="mobile-message">
+        Albeit the website is about vantage points, unfortunately, this smaller window is not one. Please view in computer browser.
+        </div>
   <body>
     <div class="text-container">
       <div class="text text1">B R U T A L I S T</div>
@@ -170,16 +179,6 @@
     <a href="Brutty.html">The Vantage Points </a>
     <a href="About-Brutty.html">About</a>
   </div>
-      <!-- <div class="grid-container">
-        <div class="grid-item-right" style="grid-row: 1">
-          <a href="Brutty.html" id="menu-1">Brutty</a>
-        </div>
-        <div class="grid-item-right" style="grid-row: 2">
-          <a href="About-BCH.html" id="menu-2">Boston City Hall</a>
-        </div>
-        <div class="grid-item-right" style="grid-row: 3">
-          <a href="About-Brutty.html" id="menu-3">About</a>
-        </div> -->
       </div>
     </footer>
     <div class="spline-container">
